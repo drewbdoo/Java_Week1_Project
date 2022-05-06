@@ -177,7 +177,7 @@ public class ChatBot {
 
              do {
                  JDialog.setDefaultLookAndFeelDecorated(true);
-                 Object[] selectionValues2 = {"byte", "int", "boolean", "number", "String", "double"};
+                 Object[] selectionValues2 = {"byte", "int", "boolean", "number", "short", "double"};
                  String initialSelection2 = "byte";
                  Object selection2 = JOptionPane.showInputDialog(null, "Question 2:" + "\n" + "\n"
                                  + "<html>Please select the best options from the following questions.</html>" + "\n"
