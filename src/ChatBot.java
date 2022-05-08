@@ -62,6 +62,8 @@ public class ChatBot {
                     "And be quick about it!!!");
 
             finalTotal(orderName, coffType, coffeeSize, price);
+        } else {
+            String coffType = "some other drink besides coffee";
         }
 
 
@@ -193,8 +195,8 @@ public class ChatBot {
         JOptionPane.showMessageDialog(null, "<html>Well, that certainly was a wonderful display of my logic circuits but it is time for <span style='color:#32CD32'>Chatter-Bot6000!</span> to take a little break<html>" + "\n"
                 + "<html>and let <span style='color:#00f0d8'>Counter-Bot9000</span> take over for a while!<html>");
         String num = JOptionPane.showInputDialog(null, "Howdy!" + "\n" + "\n" + "<html>I'm <span style='color:#00f0d8'>Counter-Bot9000</span> - can you possibly guess what I do?<html>" + "\n" + "\n"
-        +"<html>Well how's about you give me a <span style='color:#8222d6'>WONDERFUL NUMBER</span> and I'll just show you!<html>" + "\n" + "\n"
-        +"<html>*Hint* I'm not a big fan of counting decimals" + "\n" + "\n");
+        +"<html>Well how's about you give me a <span style='color:#8222d6'>WONDERFUL </span><span style='color:red'>LUCKY</span><span style='color:#8222d6'> NUMBER</span> and I'll just show you!<html>" + "\n" + "\n"
+        +"<html>*Hint* I'm not a big fan of counting decimals</html>" + "\n" + "\n");
         int i = Integer.parseInt(num);
         String outPut = " ";
          for(int z = 1 ; z<=i; z++ ){
@@ -263,8 +265,10 @@ public class ChatBot {
                      "Quiz question 3", JOptionPane.QUESTION_MESSAGE, null, selectionValues3, initialSelection3);
              String answer3 = (String.valueOf(selection3));
              if (answer3.equals("System.out.println(\"Howdy Partner\");")) {
-                 JOptionPane.showMessageDialog(null, "Correct! You aced the test! Now you get all the awesome easter eggs." + "\n" + "\n"
-                         +"<html>That was a really tough test - I think you deserve a visit to <span style='color:#7a2f0c'>Coffee-Bot-5000</span> for a nice drink</html>" + "\n" + "\n"
+                 JOptionPane.showMessageDialog(null, "Correct!" +"\n" +
+                         "You aced the test! Now you get all the awesome easter eggs." + "\n" + "\n"
+                         +"<html>Since that was was a really tough test, I think you deserve a nice break" +"\n" +
+                         "<html>Why not take a visit to <span style='color:#7a2f0c'>Coffee-Bot-5000</span> for a nice drink</html>" + "\n" + "\n"
                          +"Then, when you come back, I'll tell you a special story, all about you!!");
                  loopVar3 = false;
              } else {
@@ -277,7 +281,7 @@ public class ChatBot {
 
          public static void story(String name, String movie, int num){
          JOptionPane.showMessageDialog(null,"There once was a user named " + name + "." + "\n"
-                 +"They picked a very lucky number today: " + num + " and when they were in high school, they saw a cool movie named "+ movie);
+                 +"They picked a very lucky number today, " + num + " and when they were in high school, they saw a cool movie named "+ movie);
              JOptionPane.showMessageDialog(null, "<html>Ok ok, enough about you, let's talk more about <span style='color:#32CD32'>Chatter-Bot6000!</span></html>");
         }
 
@@ -312,7 +316,8 @@ public class ChatBot {
                             +"<html>You know <span style='color:#32CD32'>Chatter-Bot6000!</span> likes to get his drink on!</html>");
                     mondaysMakeMeSad();
                 }else if(day.equals("Saturday")){
-                    JOptionPane.showMessageDialog(null, "<html><span style='color:red'>ERROR!! EROOR</span> Saturdays <span style='color:#32CD32'>Chatter-Bot6000!</span> is offline. Far too much Friday drinking for functional Java</html> ");
+                    JOptionPane.showMessageDialog(null, "<html><span style='color:red'>ERROR!! ERROR!!</span> Saturdays <span style='color:#32CD32'>Chatter-Bot6000!</span> is offline.</html>" +"\n" +
+                            "Far too much Friday drinking for functional Java!");
                     mondaysMakeMeSad();
                 }else{
                     JOptionPane.showMessageDialog(null, "<html>Thank you so much for chatting with <span style='color:#32CD32'>Chatter-Bot6000!</span></html>" + "\n"
