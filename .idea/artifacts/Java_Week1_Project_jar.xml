@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Java_Week1_Project:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Java_Week1_Project_jar</output-path>
+    <root id="archive" name="Java_Week1_Project.jar">
+      <element id="module-output" name="Java_Week1_Project" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/out/artifacts/JavaWeek1Project_jar/JavaWeek1Project.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

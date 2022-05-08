@@ -294,40 +294,45 @@ public class ChatBot {
                             + "<html>And <span style='color:#32CD32'>Chatter-Bot6000!</span> will tell you all about how that day makes him feel.</html>",
                     "Day of the week feelings", JOptionPane.QUESTION_MESSAGE, null, selectionValues, initialSelection);
             String day = (String.valueOf(selection));
-            boolean loopWeek = true;
-            do {
-                if(day.equals("Sunday")){
+            switch(day){
+                case "Sunday":
                     JOptionPane.showMessageDialog(null, "Sundays are when I pray that all my code runs flawlessly");
                     mondaysMakeMeSad();
-                }else if(day.equals("Monday")){
+                    break;
+                case "Monday":
                     JOptionPane.showMessageDialog(null, "Mondays get me down, the weekend is over :(");
                     mondaysMakeMeSad();
-                }else if(day.equals("Tuesday")){
+                    break;
+                case "Tuesday":
                     JOptionPane.showMessageDialog(null, "Tuesdays are.... well they aren't Mondays at least");
                     mondaysMakeMeSad();
-                }else if(day.equals("Wednesday")){
+                    break;
+                case "Wednesday":
                     JOptionPane.showMessageDialog(null, "Wednesday, alright! Halfway through the week!");
                     mondaysMakeMeSad();
-                }else if(day.equals("Thursday")){
+                    break;
+                case "Thursday":
                     JOptionPane.showMessageDialog(null, "Thursdays mean I get to work from home and it's almost the weekend!");
                     mondaysMakeMeSad();
-                }else if(day.equals("Friday")){
+                    break;
+                case "Friday":
                     JOptionPane.showMessageDialog(null, "<html>Just a little more work to do on Friday, then we can party party party!</html>" + "\n" + "\n"
                             +"<html>You know <span style='color:#32CD32'>Chatter-Bot6000!</span> likes to get his drink on!</html>");
                     mondaysMakeMeSad();
-                }else if(day.equals("Saturday")){
+                    break;
+                case "Saturday":
                     JOptionPane.showMessageDialog(null, "<html><span style='color:red'>ERROR!! ERROR!!</span> Saturdays <span style='color:#32CD32'>Chatter-Bot6000!</span> is offline.</html>" +"\n" +
                             "Far too much Friday drinking for functional Java!");
                     mondaysMakeMeSad();
-                }else{
-                    JOptionPane.showMessageDialog(null, "<html>Thank you so much for chatting with <span style='color:#32CD32'>Chatter-Bot6000!</span></html>" + "\n"
+                case "I don't care anymore, let me out of this loop!":
+                JOptionPane.showMessageDialog(null, "<html>Thank you so much for chatting with <span style='color:#32CD32'>Chatter-Bot6000!</span></html>" + "\n"
                             + "<html>and to a lesser extent... <span style='color:#00f0d8'>Counter-Bot9000</span></html>" + "\n" + "\n"
                             +"<html>We hope you have a <span style='color:red'>G</span><span style='color:blue'>R</span><span style='color:green'>E</span><span style='color:yellow'>A</span><span style='color:orange'>T</span> day!!!</html>");
-                    loopWeek = false;
-                   System.exit(0);
-                }
+                    System.exit(0);
+                    break;
 
-            }while(loopWeek);
+
+            }
 
         }
     public static String coffeeOrder() {
