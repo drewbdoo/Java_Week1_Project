@@ -2,9 +2,17 @@ import java.sql.SQLOutput;
 import java.text.DecimalFormat;
 import java.util.Scanner;
 import javax.swing.*;
+import java.io.*;
 import java.awt.*;
 
 public class ChatBot {
+    public static final String ANSI_RESET = "\u001B[0m";
+    public static final String ANSI_RED_BACKGROUND
+            = "\u001B[41m";
+    public static final String ANSI_YELLOW = "\u001B[33m";
+
+    public static final String ANSI_PURPLE = "\u001B[35m";
+    public static final String ANSI_RED = "\u001B[31m";
 
     public static void main(String[] args) throws Exception {
         Scanner scanner = new Scanner(System.in);
@@ -24,7 +32,7 @@ public class ChatBot {
         int responseCoff = JOptionPane.showConfirmDialog(null, greetingCoff(), "",
                 JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
         if (responseCoff == JOptionPane.YES_NO_OPTION) {
-            System.out.println("\n" +
+            System.out.println(ANSI_PURPLE +"\n" +
                     " $$$$$$\\             $$$$$$\\   $$$$$$\\                             $$$$$$$\\             $$\\     \n" +
                     "$$  __$$\\           $$  __$$\\ $$  __$$\\                            $$  __$$\\            $$ |    \n" +
                     "$$ /  \\__| $$$$$$\\  $$ /  \\__|$$ /  \\__|$$$$$$\\   $$$$$$\\          $$ |  $$ | $$$$$$\\ $$$$$$\\   \n" +
@@ -33,30 +41,27 @@ public class ChatBot {
                     "$$ |  $$\\ $$ |  $$ |$$ |      $$ |     $$   ____|$$   ____|        $$ |  $$ |$$ |  $$ | $$ |$$\\ \n" +
                     "\\$$$$$$  |\\$$$$$$  |$$ |      $$ |     \\$$$$$$$\\ \\$$$$$$$\\         $$$$$$$  |\\$$$$$$  | \\$$$$  |\n" +
                     " \\______/  \\______/ \\__|      \\__|      \\_______| \\_______|        \\_______/  \\______/   \\____/ \n" +
-                    "                                                                                                \n" +
-                    "                                                                                                \n" +
-                    "                                                                                                \n"
-            );
 
-            System.out.println("Barista Wage Slave, prepare to get to work!!!!" + "\n" + "\n");
+             ANSI_RESET);
+
+            System.out.println(ANSI_RED_BACKGROUND + "ATTENTION BARISTA/WAGE SLAVE!!!" + ANSI_RESET + "\n" + "\n" +
+                    "Prepare to get to work!!!!" + "\n" + "\n");
             String coffType = coffeeOrder();
             String coffeeSize = coffeeSize();
             String orderName = JOptionPane.showInputDialog(null, orderName());
             String price = priceCal(coffeeSize);
 
 
-            System.out.println("Wage slave!" + "\n" +
-                    "Chop-chop!"+ "\n" +
-                    name + " has a new order for you!" + "\n" + "\n" +
-                    "They need a " + coffType + "\n" + "\n" +
-                    "and they need it to be a " + coffeeSize + "\n" + "\n" +
+
+            System.out.println(ANSI_RED_BACKGROUND + "ATTENTION WAGE SLAVE!!!!" +  ANSI_RESET + "\n" +
+                            ANSI_RED +"ORDER HAS BEEN RECEIVED!" + ANSI_RESET + "\n" +
+                    "Chop-chop!"+ "\n" +  "\n" +
+                    ANSI_YELLOW + orderName + ANSI_RESET + " has a new order for you!" + "\n" + "\n" +
+                    "They need a " + ANSI_RED + coffType + ANSI_RESET + "\n" +
+                    "Size " + ANSI_RED + coffeeSize + ANSI_RESET + "\n" + "\n" +
                     "And be quick about it!!!");
 
             finalTotal(orderName, coffType, coffeeSize, price);
-
-
-
-
         }
 
 
@@ -430,7 +435,7 @@ public class ChatBot {
 
     public static void finalTotal(String name, String type, String size, String price) {
         JOptionPane.showMessageDialog(null, "Thank you for your order " + name + "\n" + "\n" +
-                "The Barista-Wage-Slave on duty will be right with your " + size + " " + type + " and to collect payment" + "\n" + "\n" +
+                "The Barista-Wage-Slave on duty will have your " + size + " " + type + " made promptly. Have your cash and/or credit/debit and/or embedded payment chip ready" + "\n" + "\n" +
                 price);
     }
 
